@@ -1,0 +1,31 @@
+name: challenge
+on:
+  push:
+    branches:
+      - main
+    
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v3
+        - name: Get Date
+          run: date
+  job2:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get Date
+        run: date
+  job3:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get Date
+        run: date
+  job4:
+    runs-on: macos-12
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get Date
+        run: date
