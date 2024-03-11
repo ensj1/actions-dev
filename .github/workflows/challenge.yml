@@ -16,7 +16,8 @@ jobs:
         - name: Get Date
           env:
             STEP_ENVIRONMENT_VARIABLE: 'custom step environment variable for bash'
-          run: date
+          run: /
+            date
             echo "Accessing environment variables in run command"
             echo "$WORKSPACE_ENVIRONMENT_VARIABLE"
             echo "$JOB_ENVIRONMENT_VARIABLE"
@@ -41,7 +42,8 @@ jobs:
       - name: Get Date
         env:
           STEP_ENVIRONMENT_VARIABLE: 'custom step environment variable for powershell'
-        run: date
+        run:  /
+          date
           echo "Accessing environment variables in run command"
           echo "$Env:WORKSPACE_ENVIRONMENT_VARIABLE"
           echo "$Env:JOB_ENVIRONMENT_VARIABLE"
