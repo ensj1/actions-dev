@@ -7,12 +7,11 @@ jobs:
       ART_NAME: 'my-artifact'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        name: Checkout repository
-        
-      - uses: actions/upload-artifact
-        name: Print Variable
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Print Variable
+        uses: actions/upload-artifact
         with:
           name: ${{env.ART_NAME}}
           path: .
-    
